@@ -4,11 +4,35 @@
 package ent.ejercicio;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
+import java.util.List;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    @Test
+    void agregarUsuario(){
+        App classUnderTest=new App();
+        List<Usuario> Usuarios= classUnderTest.getUsuario();
+        List<Usuario> Usuarios2= classUnderTest.getUsuario();
+        Usuarios.add(new Usuario(1,"Dani","dani@gmail.com"));
+        Usuarios2.add(new Usuario(1,"Dani","dani@gmail.com"));
+        assertArrayEquals(Usuarios.toArray(), Usuarios2.toArray());
+      
+    }
+    @Test
+    void eliminarUsuario(){
+        App classUnderTest=new App();
+        classUnderTest.registrarUsuario(1, "Dani", "dani@gmail.com");
+        classUnderTest.eliminarUsuario(1);
+        List<Usuario> Usuarios = classUnderTest.getUsuario();
+        assertFalse(Usuarios.contains(new Usuario(1, "Dani", "dani@gmail.com")));
+
+
+    }
+    @Test
+    void añadirLibro(){
+        
     }
 }

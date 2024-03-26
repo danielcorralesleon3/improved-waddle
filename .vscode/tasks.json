@@ -1,0 +1,23 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "gradle",
+			"id": "c:\\Users\\alumne-DAM\\Desktop\\ENT-Ejercicio 5.3app:testapp",
+			"script": "app:test",
+			"description": "Runs the test suite.",
+			"group": "verification",
+			"project": "app",
+			"buildFile": "C:\\Users\\alumne-DAM\\Desktop\\ENT-Ejercicio 5.3\\app\\build.gradle",
+			"rootProject": "ENT-Ejercicio 5.3",
+			"projectFolder": "c:\\Users\\alumne-DAM\\Desktop\\ENT-Ejercicio 5.3",
+			"workspaceFolder": "c:\\Users\\alumne-DAM\\Desktop\\ENT-Ejercicio 5.3",
+			"args": "",
+			"javaDebug": false,
+			"problemMatcher": [
+				"$gradle"
+			],
+			"label": "gradle: app:test"
+		}
+	]
+}
